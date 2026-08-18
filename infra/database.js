@@ -15,6 +15,8 @@ async function query(queryObject) {
 }
 
 async function getNewClient() {
+
+  console.log('POSTGRES_DB in use:', process.env.POSTGRES_DB);
   const client = new Client({
     host: process.env.POSTGRES_HOST,
     port: process.env.POSTGRES_PORT,
